@@ -14,10 +14,12 @@ const TaskNew = ({value, handleChange, handleSubmit, handleReset}) => {
 }
 
 const mapStateToProps = (state) => ({
+    // variables passed into prop || : || variables retrieved from state parameter
     value: state.newTaskValue,
 })
 
 const mapDispatchToProps = (dispatch) => ({
+    // methods passed into prop || : || methods retrieved from imported reducers
     handleChange: (value) => dispatch(updateNewTaskValue(value)),
     handleReset: () => dispatch(resetNewTaskValue()),
     handleSubmit: () => dispatch(createTask())
