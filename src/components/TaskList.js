@@ -21,19 +21,19 @@ const TaskList = ({tasks, destroyTask, toggleCompleteTask}) => {
         <div key={index}>
             <h5>{task.title}</h5>
             <h5>{task.completed}</h5>
-            <button onClick={ () => { toggleCompleteTask(task.id); }}>Mark Complete</button>
+            <button onClick={ () => { toggleCompleteTask(task.id); }}>Mark Incomplete</button>
             <button onClick={ () => { destroyTask(task.id); }}>Delete</button>
         </div>
     ));
 
     return (
         <div>
-            <h1>TaskList</h1>
+            <h3>TaskList</h3>
             <hr/>
-            <h3>Incomplete List</h3>
+            <h5> -- Incomplete List -- </h5>
             {incompleteTaskList}
             <hr/>
-            <h3>Complete List</h3>
+            <h5> -- Complete List -- </h5>
             {completedTaskList}
         </div>
     )

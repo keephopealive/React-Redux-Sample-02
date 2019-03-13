@@ -6,6 +6,7 @@ import { updateNewTaskValue, resetNewTaskValue, createTask } from './../redux';
 const TaskNew = ({value, handleChange, handleSubmit, handleReset}) => {
     return (
         <div>
+            <h3>Create a Task</h3>
             <input type="text" value={value} onChange={(event) => handleChange(event.target.value)} />
             <button onClick={handleSubmit}>Add Task</button>
             <button onClick={handleReset}>Reset Input</button>
