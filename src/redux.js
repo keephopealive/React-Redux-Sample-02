@@ -11,7 +11,7 @@ export const createTask = () => ({
     type: 'CREATE_TASK',                        // <-- action.type
 });
 export const deleteTask = (id) => ({
-    type: 'DELETE_TASK',                        // <-- actigit on.type
+    type: 'DELETE_TASK',                        // <-- actigit `on.type
     id                                         // <-- action.idx
 });
 export const updateNewTaskValue = (value) => ({
@@ -59,16 +59,13 @@ export const reducers = (state = initialState, action) => {
             console.log(" -- REDUCER -- DELETE_TASK | state: ", state)
             console.log(" -- REDUCER -- DELETE_TASK | action", action)    
             let deleteIndex = state.tasks.findIndex( obj => obj['id'] === action.id);
-            return Object.assign(
-                {},
-                state,
-                {
-                    tasks: [
-                        ...state.tasks.slice(0, deleteIndex),
-                        ...state.tasks.slice(deleteIndex+1),
-                    ]
-                }
-            );
+            return {
+                ...state,
+                tasks: [
+                    ...state.tasks.slice(0, deleteIndex),
+                    ...state.tasks.slice(deleteIndex+1),
+                ]
+            }
 
         case 'RESET_NEW_TASK_VALUE':
             console.log(" -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --")

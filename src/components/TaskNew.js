@@ -28,7 +28,7 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-    // methods passed into prop || : || methods retrieved from imported reducers
+    // methods passed into prop || : || methods retrieved from imported actions
     handleChange: (value) => dispatch(updateNewTaskValue(value)),
     handleReset: () => dispatch(resetNewTaskValue()),
     handleSubmit: () => dispatch(createTask())

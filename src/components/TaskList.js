@@ -6,8 +6,10 @@ import { connect } from 'react-redux';
 import { deleteTask, toggleCompleteTask } from './../redux';
 
 const TaskList = ({tasks, destroyTask, toggleCompleteTask}) => {
+// const TaskList = (props) => {
+    // const tasks = props.tasks
 
-    return (
+    return ( 
         <div>
             <h3>TaskList</h3>
             <hr/>
@@ -46,7 +48,6 @@ TaskList.propTypes = {
     destroyTask: PropTypes.func.isRequired,
     toggleCompleteTask: PropTypes.func.isRequired,
 }
-
 
 const mapStateToProps = (state) => ({
     tasks: state.tasks,
