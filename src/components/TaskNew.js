@@ -1,5 +1,7 @@
 import React from 'react';
 
+import PropTypes from 'prop-types'
+
 import { connect } from 'react-redux';
 import { updateNewTaskValue, resetNewTaskValue, createTask } from './../redux';
 
@@ -12,6 +14,12 @@ const TaskNew = ({value, handleChange, handleSubmit, handleReset}) => {
             <button onClick={handleReset}>Reset Input</button>
         </div>
     )
+}
+TaskNew.propTypes = {
+    value: PropTypes.string.isRequired,
+    handleChange: PropTypes.func.isRequired,
+    handleSubmit: PropTypes.func.isRequired,
+    handleReset: PropTypes.func.isRequired,
 }
 
 const mapStateToProps = (state) => ({
