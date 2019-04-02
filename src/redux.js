@@ -11,7 +11,7 @@ export const createTask = () => ({
     type: 'CREATE_TASK',                        // <-- action.type
 });
 export const deleteTask = (id) => ({
-    type: 'DELETE_TASK',                        // <-- action.type
+    type: 'DELETE_TASK',                        // <-- actigit on.type
     id                                         // <-- action.idx
 });
 export const updateNewTaskValue = (value) => ({
